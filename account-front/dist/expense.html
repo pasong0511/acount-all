@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>지출</title>
+    <script defer src="vendors.780ce6cafe9d9cff3c46.bundle.js"></script><script defer src="expense.7b2bb77c011aab71ac14.bundle.js"></script></head>
+    <body>
+        <div id="root">
+            <header class="navigation">
+                <ul class="nav-area">
+                    <li class="nav-item">
+                        <a href="cssLoader.html">css-loader</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html">홈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="income.html">수입입력</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="expense.html">지출입력</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="statistical.html">통계</a>
+                    </li>
+                </ul>
+            </header>
+            <section class="contents">
+                <div class="expense-area">
+                    <form action="" method="post" class="user-input-area">
+                        <div class="input-item">
+                            <span class="input-label">지출방법</span>
+                            <div>
+                                <input
+                                    type="radio"
+                                    name="payWay"
+                                    checked="checked"
+                                    value="cash"
+                                />
+                                현금
+                                <input
+                                    type="radio"
+                                    name="payWay"
+                                    value="card"
+                                />
+                                카드
+                            </div>
+                        </div>
+                        <div class="input-item">
+                            <span class="input-label">지출금액</span>
+                            <input type="number" />
+                        </div>
+                        <div class="input-item">
+                            <span class="input-label">날짜</span>
+                            <input type="date" />
+                        </div>
+                        <div class="input-item">
+                            <span class="input-label">카테고리</span>
+                            <select>
+                                <option value="food" selected>식비</option>
+                                <option value="traffic">교통비</option>
+                                <option value="living">주거비</option>
+                                <option value="entertainment">유흥비</option>
+                                <option value="save">저축</option>
+                                <option value="others">기타</option>
+                            </select>
+                        </div>
+                        <div class="input-item">
+                            <span class="input-label">메모</span>
+                            <textarea></textarea>
+                        </div>
+                        <input
+                            type="submit"
+                            value="submit"
+                            class="submit-btn"
+                        />
+                    </form>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
