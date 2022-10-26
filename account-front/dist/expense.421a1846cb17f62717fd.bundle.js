@@ -18,7 +18,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "header {\r\n    /* position: fixed; */\r\n    background: #fff;\r\n    width: 100%;\r\n    z-index: 100;\r\n    transition: all 0.3s;\r\n    height: 60px;\r\n    z-index: 110;\r\n    border-bottom: 1px solid #e6e6e6;\r\n}\r\n\r\n.logo {\r\n    float: left;\r\n    font-size: 24px;\r\n    font-weight: 700;\r\n    padding: 16px 23px;\r\n}\r\n\r\n.nav-area {\r\n    margin: 0 0 0 200px;\r\n    padding: 0;\r\n    display: inline-block;\r\n}\r\n\r\n.nav-item {\r\n    float: left;\r\n    cursor: pointer;\r\n    color: #444;\r\n}\r\n\r\n.nav-item a {\r\n    display: inline-block;\r\n    padding: 0 25px;\r\n    font-size: 15px;\r\n    font-weight: 300;\r\n    line-height: 60px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/navigation.css"],"names":[],"mappings":"AAAA;IACI,qBAAqB;IACrB,gBAAgB;IAChB,WAAW;IACX,YAAY;IACZ,oBAAoB;IACpB,YAAY;IACZ,YAAY;IACZ,gCAAgC;AACpC;;AAEA;IACI,WAAW;IACX,eAAe;IACf,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,mBAAmB;IACnB,UAAU;IACV,qBAAqB;AACzB;;AAEA;IACI,WAAW;IACX,eAAe;IACf,WAAW;AACf;;AAEA;IACI,qBAAqB;IACrB,eAAe;IACf,eAAe;IACf,gBAAgB;IAChB,iBAAiB;AACrB","sourcesContent":["header {\r\n    /* position: fixed; */\r\n    background: #fff;\r\n    width: 100%;\r\n    z-index: 100;\r\n    transition: all 0.3s;\r\n    height: 60px;\r\n    z-index: 110;\r\n    border-bottom: 1px solid #e6e6e6;\r\n}\r\n\r\n.logo {\r\n    float: left;\r\n    font-size: 24px;\r\n    font-weight: 700;\r\n    padding: 16px 23px;\r\n}\r\n\r\n.nav-area {\r\n    margin: 0 0 0 200px;\r\n    padding: 0;\r\n    display: inline-block;\r\n}\r\n\r\n.nav-item {\r\n    float: left;\r\n    cursor: pointer;\r\n    color: #444;\r\n}\r\n\r\n.nav-item a {\r\n    display: inline-block;\r\n    padding: 0 25px;\r\n    font-size: 15px;\r\n    font-weight: 300;\r\n    line-height: 60px;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "header {\r\n    /* position: fixed; */\r\n    background: #fff;\r\n    width: 100%;\r\n    z-index: 100;\r\n    height: 60px;\r\n    z-index: 110;\r\n    border-bottom: 1px solid #e6e6e6;\r\n}\r\n\r\n.logo {\r\n    float: left;\r\n    font-size: 24px;\r\n    font-weight: 700;\r\n    padding: 16px 23px;\r\n}\r\n\r\n.nav-area {\r\n    margin: 0 0 0 200px;\r\n    padding: 0;\r\n    display: inline-block;\r\n}\r\n\r\n.nav-item {\r\n    float: left;\r\n    cursor: pointer;\r\n    color: #444;\r\n}\r\n\r\n.nav-item a {\r\n    display: inline-block;\r\n    padding: 0 25px;\r\n    font-size: 15px;\r\n    font-weight: 300;\r\n    line-height: 60px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/navigation.css"],"names":[],"mappings":"AAAA;IACI,qBAAqB;IACrB,gBAAgB;IAChB,WAAW;IACX,YAAY;IACZ,YAAY;IACZ,YAAY;IACZ,gCAAgC;AACpC;;AAEA;IACI,WAAW;IACX,eAAe;IACf,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,mBAAmB;IACnB,UAAU;IACV,qBAAqB;AACzB;;AAEA;IACI,WAAW;IACX,eAAe;IACf,WAAW;AACf;;AAEA;IACI,qBAAqB;IACrB,eAAe;IACf,eAAe;IACf,gBAAgB;IAChB,iBAAiB;AACrB","sourcesContent":["header {\r\n    /* position: fixed; */\r\n    background: #fff;\r\n    width: 100%;\r\n    z-index: 100;\r\n    height: 60px;\r\n    z-index: 110;\r\n    border-bottom: 1px solid #e6e6e6;\r\n}\r\n\r\n.logo {\r\n    float: left;\r\n    font-size: 24px;\r\n    font-weight: 700;\r\n    padding: 16px 23px;\r\n}\r\n\r\n.nav-area {\r\n    margin: 0 0 0 200px;\r\n    padding: 0;\r\n    display: inline-block;\r\n}\r\n\r\n.nav-item {\r\n    float: left;\r\n    cursor: pointer;\r\n    color: #444;\r\n}\r\n\r\n.nav-item a {\r\n    display: inline-block;\r\n    padding: 0 25px;\r\n    font-size: 15px;\r\n    font-weight: 300;\r\n    line-height: 60px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -150,63 +150,15 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ 20:
+/***/ 22:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_reset_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
 /* harmony import */ var _css_navigation_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 
 
-function saveIncome(way, mony, date, category, memo) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const [year, month, day] = date.split("-");
-        console.log(way, mony, date, category, memo);
-        console.log(year, month, day);
-        const incomeData = JSON.stringify({
-            payedMoney: way,
-            category: category,
-            memo: memo,
-            payYear: year,
-            payMonth: month,
-            payDay: day,
-        });
-        const requstOption = {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: incomeData,
-        };
-        const response3 = yield fetch("/api/account/income/", requstOption);
-        const data3 = yield response3.json();
-        console.log(data3);
-    });
-}
-const submitBtnEl = document.querySelector(".submit-btn");
-function submitIncomeData() {
-    const incomeWayEl = document.querySelector(".income-way");
-    const incomeMonyEl = document.querySelector(".income-mony");
-    const dateEl = document.querySelector("input[type='date']");
-    const categoryEl = document.querySelector(".category-way");
-    const memoEl = document.querySelector(".input-memo");
-    console.log(incomeWayEl.options[incomeWayEl.selectedIndex].value);
-    console.log(incomeMonyEl.value);
-    console.log(dateEl.value);
-    console.log(categoryEl.value);
-    console.log(memoEl.value);
-    saveIncome(incomeWayEl.options[incomeWayEl.selectedIndex].value, Number(incomeMonyEl.value), dateEl.value, categoryEl.value, memoEl.value);
-}
-submitBtnEl === null || submitBtnEl === void 0 ? void 0 : submitBtnEl.addEventListener("click", submitIncomeData);
+console.log("zzz");
 
 
 /***/ })
@@ -345,7 +297,7 @@ submitBtnEl === null || submitBtnEl === void 0 ? void 0 : submitBtnEl.addEventLi
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			2: 0
+/******/ 			1: 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -400,9 +352,9 @@ submitBtnEl === null || submitBtnEl === void 0 ? void 0 : submitBtnEl.addEventLi
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [5], () => (__webpack_require__(20)))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [5], () => (__webpack_require__(22)))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=income.ec9e0284e6199d6cfa10.bundle.js.map
+//# sourceMappingURL=expense.421a1846cb17f62717fd.bundle.js.map
