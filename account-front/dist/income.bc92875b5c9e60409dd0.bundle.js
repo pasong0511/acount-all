@@ -167,19 +167,19 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 };
 
 
-function saveIncome(way, mony, date, category, memo) {
+function saveIncome(payedMoney, category, memo, payYear, payMonth, payDay) {
     return __awaiter(this, void 0, void 0, function* () {
-        const [year, month, day] = date.split("-");
-        console.log(way, mony, date, category, memo);
-        console.log(year, month, day);
         const incomeData = JSON.stringify({
-            payedMoney: way,
-            category: category,
-            memo: memo,
-            payYear: year,
-            payMonth: month,
-            payDay: day,
+            content: {
+                payedMoney: payedMoney,
+                category: category,
+                memo: memo,
+                payYear: payYear,
+                payMonth: payMonth,
+                payDay: payDay,
+            },
         });
+        console.log("넘어옴", incomeData);
         const requstOption = {
             method: "POST",
             headers: {
@@ -187,24 +187,23 @@ function saveIncome(way, mony, date, category, memo) {
             },
             body: incomeData,
         };
-        const response3 = yield fetch("/api/account/income/", requstOption);
-        const data3 = yield response3.json();
-        console.log(data3);
+        const response = yield fetch("/api/account/income", requstOption);
+        const data = yield response.json();
+        console.log(data);
     });
 }
-const submitBtnEl = document.querySelector(".submit-btn");
+const submitBtnEl = document.querySelector(".submitBtn");
 function submitIncomeData() {
-    const incomeWayEl = document.querySelector(".income-way");
-    const incomeMonyEl = document.querySelector(".income-mony");
-    const dateEl = document.querySelector("input[type='date']");
-    const categoryEl = document.querySelector(".category-way");
-    const memoEl = document.querySelector(".input-memo");
-    console.log(incomeWayEl.options[incomeWayEl.selectedIndex].value);
-    console.log(incomeMonyEl.value);
-    console.log(dateEl.value);
-    console.log(categoryEl.value);
-    console.log(memoEl.value);
-    saveIncome(incomeWayEl.options[incomeWayEl.selectedIndex].value, Number(incomeMonyEl.value), dateEl.value, categoryEl.value, memoEl.value);
+    const payedCategoryEl = document.querySelector(".payedCategory");
+    const payedMoneyEl = document.querySelector(".payedMoney");
+    const payedDateEl = document.querySelector("input[type='date']");
+    const memoEl = document.querySelector(".payedMemo");
+    console.log("방법", payedCategoryEl.options[payedCategoryEl.selectedIndex].value);
+    console.log("수입", payedMoneyEl.value);
+    console.log("데이트", payedDateEl.value);
+    console.log("메모", memoEl.value);
+    const [year, month, day] = payedDateEl.value.split("-");
+    saveIncome(Number(payedMoneyEl.value), payedCategoryEl.options[payedCategoryEl.selectedIndex].value, memoEl.value, Number(year), Number(month), Number(day));
 }
 submitBtnEl === null || submitBtnEl === void 0 ? void 0 : submitBtnEl.addEventListener("click", submitIncomeData);
 
@@ -405,4 +404,4 @@ submitBtnEl === null || submitBtnEl === void 0 ? void 0 : submitBtnEl.addEventLi
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=income.addf3d1a5ab8a3bf668e.bundle.js.map
+//# sourceMappingURL=income.bc92875b5c9e60409dd0.bundle.js.map

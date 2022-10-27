@@ -4,11 +4,12 @@ const app = express();
 const mysql = require("mysql");
 const connection = mysql.createConnection({
     host: "localhost",
-    user: "root",
+    user: "local",
     password: "1q2w3e4r",
     database: "accountbook",
 });
 connection.connect();
+app.use(express.static("public"));
 app.use(express.json());
 app.post("/api/account/income", (req, res) => {
     var _a;
@@ -23,7 +24,7 @@ app.post("/api/account/income", (req, res) => {
         if (err) {
             throw err;
         }
-        res.sendStatus(200);
+        res.send(200);
     });
 });
 app.get("/api/account/income", (req, res) => {
@@ -36,7 +37,7 @@ app.get("/api/account/income", (req, res) => {
     });
 });
 app.delete("/api/account/income", (req, res) => {
-    connection.query("delete * from income ", (err, rows) => {
+    connection.query("delete  from income ", (err, rows) => {
         if (err) {
             throw err;
         }
@@ -63,7 +64,7 @@ app.put("/api/account/income/id/:id", (req, res) => {
     });
 });
 app.delete("/api/account/income/id/:id", (req, res) => {
-    connection.query("delete * from income where id = ?", [req.params.id], (err, rows) => {
+    connection.query("delete from income where id = ?", [req.params.id], (err, rows) => {
         if (err) {
             throw err;
         }
@@ -120,7 +121,23 @@ app.post("/api/account/expend", (req, res) => {
         if (err) {
             throw err;
         }
-        res.sendStatus(200);
+        res.send(rows);
+    });
+});
+app.get("/api/account/income/payMonth/money/:payMonth", (req, res) => {
+    connection.query("select sum(payedMoney) from income where payMonth = ? ", [req.params.payMonth], (err, rows) => {
+        if (err) {
+            throw err;
+        }
+        res.send(rows);
+    });
+});
+app.get("/api/account/expend/payMonth/money/:payMonth", (req, res) => {
+    connection.query("select sum(payedMoney) from expend where payMonth = ? ", [req.params.payMonth], (err, rows) => {
+        if (err) {
+            throw err;
+        }
+        res.send(rows);
     });
 });
 app.get("/api/account/expend", (req, res) => {
@@ -132,7 +149,7 @@ app.get("/api/account/expend", (req, res) => {
     });
 });
 app.delete("/api/account/expend/id/:id", (req, res) => {
-    connection.query("delete * from expend where id = ?", [req.params.id], (err, rows) => {
+    connection.query("delete  from expend where id = ?", [req.params.id], (err, rows) => {
         if (err) {
             throw err;
         }
@@ -167,7 +184,7 @@ app.get("/api/account/expend/id/:id", (req, res) => {
     });
 });
 app.delete("/api/account/expend/id/:id", (req, res) => {
-    connection.query("delete * from expend where id = ? ", [req.params.id], (err, rows) => {
+    connection.query("delete  from expend where id = ? ", [req.params.id], (err, rows) => {
         if (err) {
             throw err;
         }
@@ -198,11 +215,6 @@ app.get("/api/account/expend/payDay/:payDay", (req, res) => {
         res.send(rows);
     });
 });
-const { createProxyMiddleware } = require("http-proxy-middleware");
-app.use(createProxyMiddleware("/", {
-    target: "http://localhost:8080/",
-    changeOrigin: true,
-}));
 app.listen(3000, () => {
-    console.log("listening on 3000…");
+    console.log("listening on 3000...");
 });

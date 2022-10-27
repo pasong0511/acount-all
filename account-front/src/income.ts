@@ -8,24 +8,25 @@ interface PostOption {
 }
 
 async function saveIncome(
-    way: string,
-    mony: number,
-    date: string,
+    payedMoney: number,
     category: string,
-    memo: string
+    memo: string,
+    payYear: number,
+    payMonth: number,
+    payDay: number
 ) {
-    const [year, month, day] = date.split("-");
-    console.log(way, mony, date, category, memo);
-    console.log(year, month, day);
-
     const incomeData = JSON.stringify({
-        payedMoney: way,
-        category: category,
-        memo: memo,
-        payYear: year,
-        payMonth: month,
-        payDay: day,
+        content: {
+            payedMoney: payedMoney,
+            category: category,
+            memo: memo,
+            payYear: payYear,
+            payMonth: payMonth,
+            payDay: payDay,
+        },
     });
+
+    console.log("넘어옴11", incomeData);
 
     const requstOption: PostOption = {
         method: "POST",
@@ -35,40 +36,43 @@ async function saveIncome(
         body: incomeData,
     };
 
-    const response3 = await fetch("/api/account/income/", requstOption);
-
-    const data3 = await response3.json();
-    console.log(data3);
+    const response = await fetch("/api/account/income", requstOption);
+    console.log(response);
+    //const data = await response.json();
+    //console.log(data);
 }
 
-const submitBtnEl = document.querySelector(".submit-btn");
+const submitBtnEl = document.querySelector(".submitBtn");
 
 function submitIncomeData(): any {
-    const incomeWayEl = document.querySelector(
-        ".income-way"
+    const payedCategoryEl = document.querySelector(
+        ".payedCategory"
     ) as HTMLSelectElement;
-    const incomeMonyEl = document.querySelector(
-        ".income-mony"
+    const payedMoneyEl = document.querySelector(
+        ".payedMoney"
     ) as HTMLSelectElement;
-    const dateEl = document.querySelector(
+    const payedDateEl = document.querySelector(
         "input[type='date']"
     ) as HTMLSelectElement;
-    const categoryEl = document.querySelector(
-        ".category-way"
-    ) as HTMLSelectElement;
-    const memoEl = document.querySelector(".input-memo") as HTMLSelectElement;
-    console.log(incomeWayEl.options[incomeWayEl.selectedIndex].value);
-    console.log(incomeMonyEl.value);
-    console.log(dateEl.value);
-    console.log(categoryEl.value);
-    console.log(memoEl.value);
+    const memoEl = document.querySelector(".payedMemo") as HTMLSelectElement;
+
+    console.log(
+        "방법",
+        payedCategoryEl.options[payedCategoryEl.selectedIndex].value
+    );
+    console.log("수입", payedMoneyEl.value);
+    console.log("데이트", payedDateEl.value);
+    console.log("메모", memoEl.value);
+
+    const [year, month, day] = payedDateEl.value.split("-");
 
     saveIncome(
-        incomeWayEl.options[incomeWayEl.selectedIndex].value,
-        Number(incomeMonyEl.value),
-        dateEl.value,
-        categoryEl.value,
-        memoEl.value
+        Number(payedMoneyEl.value),
+        payedCategoryEl.options[payedCategoryEl.selectedIndex].value,
+        memoEl.value,
+        Number(year),
+        Number(month),
+        Number(day)
     );
 }
 
